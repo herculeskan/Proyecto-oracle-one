@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ONE challenge 1</title>
+</head>
+
+<body>
+    <header>
+        <h1>Encriptador bien makia</h1>
+    </header>
+    <main class="contenedor-principal">
+        <section class="contenedor">
+            <div class="tarjeta">
+                <h2>Mensaje que ya quieras encriptar</h2>
+                <label for="mensaje"><textarea name="mensaje" id="mensaje" cols="30" rows="10"
+                        placeholder="Escribe un mensaje a encriptar"></textarea></label>
+                <div class="botones">
+                    <button id="encriptar">encriptar</button>
+                    <button id="desencriptar">desencriptar</button>
+                    <button id="btn">Limpia esta mondá</button>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <h2>mensaje ya encriptado</h2>
+                <label for="resultado"><textarea name="resultado" id="resultado" cols="30" rows="10"></textarea></label>
+                <div class="botones">
+                    <button id="copiar">Copiar</button>
+                    <button id="escuchar">escuchar</button>
+                </div>
+            </div>
+
+
+
+            </div>
+        </section>
+    </main>
+    <script src="code.js">
+        const textarea = document.getElementById('mensaje');
+
+        // ✅ Clear textarea value
+        textarea.value = '';
+
+        // ✅ Clear textarea value on click
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', function handleClick() {
+            // 👇️ log value before clearing it
+            console.log(textarea.value);
+
+            // 👇️ clear textarea value
+            textarea.value = '';
+        });
+
+    </script>
+</body>
+
+</html>
