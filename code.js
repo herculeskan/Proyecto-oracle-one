@@ -6,6 +6,8 @@ const btnDesencriptar = document.querySelector("#desencriptar");
 
 const btnCopiar = document.querySelector("#copiar");
 const btnEscuchar = document.querySelector("#escuchar");
+const btnBorrar = document.getElementById("#borrar");
+
 
 function encriptar() {
   var mensaje = inputMensaje.value;
@@ -44,7 +46,10 @@ function escuchar() {
   window.speechSynthesis.speak(msg);
 }
 function borrar(){
-  
+console.log("Funciona");
+inputMensaje.value = "";
+inputResultado.value = "";
+
 }
 btnEncriptar.onclick = encriptar;
 btnDesencriptar.onclick = desencriptar;
